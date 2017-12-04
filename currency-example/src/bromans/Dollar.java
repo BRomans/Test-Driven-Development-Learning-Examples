@@ -1,15 +1,13 @@
 package bromans;
 
-public class Dollar {
+public class Dollar extends Money {
 
-    protected int amount;
-
-    Dollar(int amount){
-        this.amount = amount;
+    Dollar(int amount, String currency){
+        super(amount, currency);
     }
-    
-    Dollar times(int multiplier){
-        return new Dollar(amount * multiplier);
+
+    String currency(){
+        return currency;
     }
 
 }
