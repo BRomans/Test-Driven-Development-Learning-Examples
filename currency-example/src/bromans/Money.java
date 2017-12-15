@@ -3,7 +3,7 @@ package bromans;
 /**
  * Created by Michele Romani on 04/12/2017.
  */
-public class Money {
+public class Money implements Expression{
     protected int amount;
     protected String currency;
 
@@ -31,6 +31,10 @@ public class Money {
 
     Money times(int multiplier){
         return new Money(amount * multiplier, currency);
+    }
+
+    Expression plus(Money addend){
+        return new Money(amount + addend.amount, currency);
     }
 
     public String toString() {
