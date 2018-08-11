@@ -2,7 +2,7 @@ package bromans;
 
 public class Bank {
 
-    Money reduce(Expression source, String to){
-        return null;
+    Money reduce(Expression source, String to) {
+        return source.reduce(to);
     }
 }
